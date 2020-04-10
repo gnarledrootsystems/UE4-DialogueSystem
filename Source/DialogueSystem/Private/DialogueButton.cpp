@@ -1,8 +1,8 @@
 //Copyright (c) 2016 Artem A. Mavrin and other contributors
 
 #include "DialogueSystemPrivatePCH.h"
-#include "Widget.h"
-#include "TextBlock.h"
+#include "Components/Widget.h"
+#include "Components/TextBlock.h"
 #include "DialogueButton.h"
 
 #define LOCTEXT_NAMESPACE "DialogueSystem"

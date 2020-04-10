@@ -4,7 +4,7 @@
 #include "BTTask_WaitAnswer.h"
 #include "BTComposite_QuestionGroup.h"
 
-#include "UObjectToken.h"
+#include "Misc/UObjectToken.h"
 
 #define LOCTEXT_NAMESPACE "DialogueSystem" 
 

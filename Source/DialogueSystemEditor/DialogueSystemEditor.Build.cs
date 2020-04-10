@@ -6,6 +6,8 @@ public class DialogueSystemEditor : ModuleRules
 {
     public DialogueSystemEditor(ReadOnlyTargetRules Target) : base (Target)
 	{
+        bEnforceIWYU = false;
+
         PrivatePCHHeaderFile = "Private/DialogueSystemEditorPrivatePCH.h";
 
         PrivateIncludePaths.AddRange(

@@ -3,8 +3,8 @@
 #pragma once
 #include "DialogueSystemEditorPrivatePCH.h"
 #include "QuestBookEditor.h"
-
-#include "SDockTab.h"
+#include "Subsystems/AssetEditorSubsystem.h"
+#include "Widgets/Docking/SDockTab.h"
 #include "Editor/PropertyEditor/Public/PropertyEditorModule.h"
 
 #define LOCTEXT_NAMESPACE "DialogueSystem"
@@ -138,7 +138,11 @@ void FQuestBookEditor::ExtendList()
 
 void FQuestBookEditor::InitQuestBookEditor(const EToolkitMode::Type Mode, const TSharedPtr< class IToolkitHost >& InitToolkitHost, class UQuestBook* InitQuestBook)
 {
-	FAssetEditorManager::Get().CloseOtherEditors(InitQuestBook, this);
+	GEditor->GetEditorSubsystem<UAssetEditorSubsystem>()->CloseOtherEditors(InitQuestBook, this);
+
+	//class UAssetEditorSubsystem *assetEditorSubsystem = new UAssetEditorSubsystem();
+	//assetEditorSubsystem->CloseOtherEditors(InitQuestBook, this);
+
 	QuestBookBeingEdited = InitQuestBook;
 
 	// Default layout

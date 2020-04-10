@@ -6,8 +6,9 @@ public class PluginSystemEditor : ModuleRules
 {
     public PluginSystemEditor(ReadOnlyTargetRules Target) : base (Target)
 	{
+        bEnforceIWYU = false;
 
-		PrivateIncludePaths.AddRange(
+        PrivateIncludePaths.AddRange(
             new string[] { "" });
 
         PublicDependencyModuleNames.AddRange(
